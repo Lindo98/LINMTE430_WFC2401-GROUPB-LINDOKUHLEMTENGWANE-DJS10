@@ -8,9 +8,7 @@ function Blog() {
     fetch("https://jsonplaceholder.typicode.com/posts")
       .then((response) => response.json())
       .then((json) => setPosts(json))
-      .catch((error) =>
-        setError("Failed to fetch posts. Please try again later.")
-      );
+      .catch((error) => setError("Data Fetching Failed"));
   }, []);
 
   return (
